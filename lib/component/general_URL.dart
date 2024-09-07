@@ -1,0 +1,3 @@
+
+String serverUrl = "";
+String downloadurl="";
