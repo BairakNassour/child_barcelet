@@ -1,20 +1,15 @@
+import 'package:child_barcelet/component/Color.dart';
+import 'package:child_barcelet/component/widgetofauth.dart';
 import 'package:flutter/material.dart';
-import 'package:sparklig_spectrum/authentication/widgetofauth.dart';
-import 'package:sparklig_spectrum/component/Color.dart';
-import 'package:sparklig_spectrum/view/child/homepagechild.dart';
-import 'package:sparklig_spectrum/view/parent/homepage.dart';
 
-import 'singup.dart';
 class Login extends StatefulWidget {
-  final String type;
-  const Login({super.key, required this.type});
+  const Login({super.key,});
 
   @override
   State<Login> createState() => _LoginState();
 }
 
 bool _isHiddenPassword=true;
-TextEditingController myipcontrller=TextEditingController();
 TextEditingController passwordcontroller=TextEditingController();
 TextEditingController emailcontroller=TextEditingController();
 
@@ -134,24 +129,7 @@ class _LoginState extends State<Login> {
                                                           //  _user_control.login(context,emailcontroller.text,passwordcontroller.text,filteruser(widget.type.toString())).whenComplete((){
                                                               setIgnoring(!ignoring);
                                                           //  });
-                                                           if (widget.type=="child") {
-                                                                  Navigator.push(context,
-                                                                      MaterialPageRoute(builder: (BuildContext context) {
-                                                                        return HomePageChild();
-                                                                      }));
-                                                                  } else if(widget.type=="Parent") {
-                                                                    Navigator.push(context,
-                                                                      MaterialPageRoute(builder: (BuildContext context) {
-                                                                        return HomePageParent();
-                                                                      }));
-                                                                  
-                                                                
-                                                                  }else{
-                                                                  //   _user_control.registerspecial(emailcontroller.text,passwordcontroller.text,firstnamecontroller.text, 
-                                                                  // phonenumbercontroller.text,
-                                                                  //  filteruser(widget.type),"ksa", context);
-                                                                
-                                                                  }
+                                                          
                                                            
                                                           
                                                           
@@ -166,10 +144,7 @@ class _LoginState extends State<Login> {
                                                         child: MaterialButton(
                                                           child:Text("Sign up"),
                                                           onPressed: () { 
-                                                            Navigator.push(context,
-                                                                MaterialPageRoute(builder: (BuildContext context) {
-                                                              return Signup(type: widget.type,);
-                                                            }));
+                                                            
                                                         //  _authentiction_control.login(context, emailcontroller.text, passwordcontroller.text);
                                                         })),
                         
@@ -189,12 +164,3 @@ class _LoginState extends State<Login> {
     );
   }
 }
-filteruser(String myuser){
-    if (myuser=="Parent") {
-      return "login_parent";
-    } else if(myuser=="child"){
-       return "login_children";
-    }else{
-      return "login_specialist";
-    }
-  }

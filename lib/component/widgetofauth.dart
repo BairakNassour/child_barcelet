@@ -1,6 +1,6 @@
 
+import 'package:child_barcelet/component/Color.dart';
 import 'package:flutter/material.dart';
-import 'package:sparklig_spectrum/component/Color.dart';
 Container textform(controllerText, String Title, TextInputType type,void Function()? onTappassword,bool _isHiddenPassword,String? Function(String?)? validator,Widget? prefixIcon) {
   
     return Container(
