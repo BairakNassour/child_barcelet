@@ -27,6 +27,7 @@ class _MapScreenState extends State<MapScreen> {
 
   final LatLng _safetyZone = const LatLng(34.8722117, 35.8921997);
   // LatLng(34.8722117, 35.8921997)
+
   final double _radius = 1000.0;
   bool loading = false;
   Timer? _timer;
