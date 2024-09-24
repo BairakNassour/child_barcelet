@@ -73,7 +73,7 @@ class _HomePageChildState extends State<HomePageChild> {
     GoogleMapController? gmc;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Map"),
+        title: Text("تتبع الموقع الطفل"),
         backgroundColor: globalcolor,
       ),
       body: Container(
